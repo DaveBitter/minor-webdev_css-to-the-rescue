@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gulp - BrowserSync, Jade, Sass starter templates</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Styleguide</h1>
+      <p>Dave Bitter | 500710907</p>
+    </header>
+    <main>
+      <section id="chat">
+        <ol>
+          <li data-person="me">
+            <p>Hey!</p>
+            <footer>
+              <p>Posted on
+                <time datatime="2015-01-22T10:25">10:25 AM</time> by you
+              </p>
+              <p data-status="READ">Has been read</p>
+            </footer>
+          </li>
+          <li data-person="other">
+            <p>Hey! Sorry I was busy</p>
+            <footer>
+              <p>Posted on
+                <time datatime="2017-02-03T14:19">2:19 PM</time> by John
+              </p>
+            </footer>
+          </li>
+          <li data-person="me">
+            <p>I sent that 2 years ago</p>
+            <footer>
+              <p>Posted on
+                <time datatime="2017-02-03T14:22">2:22 PM</time> by you
+              </p>
+              <p data-status="DELIVERED">Has been delivered</p>
+            </footer>
+          </li>
+        </ol>
+        <form action="/" method="post">
+          <label for="field-message">Message</label>
+          <textarea id="field-message" name="field-message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+      <section id="login">
+        <form action="/" method="post">
+          <label for="field-email">Email</label>
+          <input id="field-email" type="email" name="field-email" autocomplete="email" required="" autofocus="">
+          <label for="field-password">Password</label>
+          <input id="field-password" type="password" name="field-password" required="">
+          <label for="field-stay-logged-in">
+            <input id="field-stay-logged-in" type="checkbox" name="field-stay-logged-in" value="stay-logged-in">Stay logged in
+          </label>
+          <div><a href="/" class="block pull-right">Forgot password</a></div>
+          <button type="submit" class="btn btn--primary">Login</button>
+        </form>
+      </section>
+    </main>
+    <script type="text/javascript" src="assets/js/Script.js"></script>
+  </body>
+</html>
