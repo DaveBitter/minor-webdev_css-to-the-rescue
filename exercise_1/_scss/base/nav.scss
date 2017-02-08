@@ -3,6 +3,11 @@ nav {
 	justify-content: space-between;
 	flex-direction: column;
 	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
 
 	> header {
 		font-size: .8em;
@@ -10,6 +15,7 @@ nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
+		padding: 0 2rem;
 
 		> * {
 			margin: 0 0 .5rem;
@@ -22,6 +28,15 @@ nav {
 		justify-content: space-between;
 		width: 100%;
 		padding: 0;
+
+		&#menu {
+			display: none;
+
+			&.is-open {
+				display: block;
+				box-shadow: 0 .3rem .6rem rgba(0,0,0,0.16), 0 .3rem .6rem rgba(0,0,0,0.23);
+			}
+		}
 
 		& li {
 			display: block;
@@ -72,6 +87,10 @@ nav {
 				display: none;
 			}
 		}
+
+		> ul#menu {
+			display: block;
+		}
 	}
 
 	main {
@@ -79,3 +98,4 @@ nav {
 		width: calc(100% -20rem);
 	}
 }
+

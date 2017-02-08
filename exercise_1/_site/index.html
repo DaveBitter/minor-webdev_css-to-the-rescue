@@ -22,13 +22,14 @@
           <h3>Components</h3>
           <ul>
             <li><a href="#chat">Chat</a></li>
-            <li><a href="#form">Form</a></li>
+            <li><a href="#login">Login</a></li>
           </ul>
         </li>
       </ul>
     </nav>
     <main>
-      <section id="chat">
+      <section id="chat" class="active">
+        <h1>Chat</h1>
         <ol>
           <li data-person="me">
             <p>Hey!</p>
@@ -63,7 +64,8 @@
           <button type="submit">Send</button>
         </form>
       </section>
-      <section id="login">
+      <section id="login" class="active">
+        <h1>Login</h1>
         <form action="/" method="post">
           <label for="field-email">Email</label>
           <input id="field-email" type="email" name="field-email" autocomplete="email" required="" autofocus="">
