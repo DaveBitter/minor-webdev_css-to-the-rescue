@@ -8,7 +8,7 @@
 
 
 :root {
-	 font-size: 1rem;
+	 font-size: 1vrem;
 }
 
 ::selection {
@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6, p, label {
 	color: #999;
 }
 
+p {
+	max-width: 30rem;
+}
+
 img {
 	max-width: 100%;
 }
@@ -50,18 +54,26 @@ main {
 	flex-direction: column;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	justify-content: center;
 
 	margin-top: 5rem;
 }
 
 main > section {
-	padding: .5rem 1rem;
+	padding: 1rem;
 	margin: 1rem;
 	width: calc(100% - 2rem);
 	background-color: white;
 	box-shadow: 0 .3rem .6rem rgba(0,0,0,0.16), 0 .3rem .6rem rgba(0,0,0,0.23);
 
 	display: none;
+
+	> h1 {
+		margin: 0 0 1.5rem 0;
+		border-bottom: .1rem solid $lightest-gray;
+		text-align: center;
+		padding-bottom: .5rem;
+	}
 
 	&.active {
 		display: block;
@@ -71,11 +83,7 @@ main > section {
 
 
 main section {
-	&#chat {
-		width: calc(100% - 2rem);
-	}
-
-	&#login {
+	& {
 		width: calc(100% - 2rem);
 	}
 }
@@ -98,23 +106,33 @@ main section {
 		&#picture {
 			width: 40%;
 		}
+		&#rating {
+			width: 50%;
+		}
 	}
 
 }
 
 
 @media(min-width: 120rem) {
-	main section {
-		&#chat {
-			width: 30%;
-		}
+	main {
+		justify-content: flex-start;
 
-		&#login {
-			width: 20%;
-		}
-		&#mediaitem,
-		&#picture {
-			width: 40%;
+		section {
+			&#chat {
+				width: 30%;
+			}
+
+			&#login {
+				width: 20%;
+			}
+			&#mediaitem,
+			&#picture {
+				width: 40%;
+			}
+			&#rating {
+				width: 30%;
+			}
 		}
 	}
 

@@ -39,7 +39,8 @@ input, textarea {
   border: none;
   padding: 1rem;
   border-radius: .5rem;
-  margin: .5rem 0 1rem; }
+  margin: .5rem 0 1rem;
+  max-height: 5rem; }
   input:hover, input:focus, textarea:hover, textarea:focus {
     outline: none;
     background-color: gainsboro; }
@@ -62,7 +63,7 @@ a.block {
   a.block:hover, a.block:focus {
     background-color: gainsboro; }
 
-nav {
+body > nav {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -72,28 +73,28 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000; }
-  nav > header {
+  body > nav > header {
     font-size: .8em;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding: 0 2rem; }
-    nav > header > * {
+    body > nav > header > * {
       margin: 0 0 .5rem; }
-  nav ul {
+  body > nav ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
     padding: 0; }
-    nav ul#menu {
+    body > nav ul#menu {
       display: none; }
-      nav ul#menu.is-open {
+      body > nav ul#menu.is-open {
         display: block; }
-    nav ul li {
+    body > nav ul li {
       display: block; }
-  nav a, nav h3 {
+  body > nav a, body > nav h3 {
     text-decoration: none;
     color: #595959;
     background-color: white;
@@ -101,7 +102,7 @@ nav {
     display: block;
     padding: 1rem;
     margin: 0; }
-  nav a.active {
+  body > nav a.active {
     background-color: #DE1B1B;
     color: white;
     animation-name: fadeInLeft;
@@ -189,6 +190,14 @@ section#mediaitem article {
       color: white;
       text-decoration: none; }
 
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  max-width: 30rem; }
+
 section#chat ol {
   list-style: none;
   display: flex;
@@ -273,7 +282,8 @@ section#picture h1:last-of-type:not(:only-of-type) {
   padding: 1rem;
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
-  background-color: #e9e9e9; }
+  background-color: #DE1B1B;
+  color: white; }
 
 section#picture figure {
   margin: 0;
@@ -286,16 +296,71 @@ section#picture figure {
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
     background-color: #e9e9e9; }
-    section#picture figure figcaption *:not(a) {
-      color: #595959; }
-    section#picture figure figcaption a {
-      float: right; }
+    section#picture figure figcaption footer {
+      color: #595959;
+      font-size: .8em;
+      line-height: .8rem; }
+      section#picture figure figcaption footer a {
+        float: right; }
+  section#picture figure img {
+    width: 100%; }
   @media (orientation: portrait) {
     section#picture figure img[data-orientation="portrait"] {
       display: block; } }
   @media (orientation: landscape) {
     section#picture figure img[data-orientation="landscape"] {
       display: block; } }
+
+section#rating fieldset {
+  border: none;
+  background-color: #e9e9e9;
+  position: relative;
+  padding-top: 1.4rem; }
+  section#rating fieldset legend {
+    position: absolute;
+    color: #595959;
+    top: .5rem; }
+
+section#rating div[role="fieldset"] {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center; }
+  section#rating div[role="fieldset"] input {
+    margin: 1rem .2rem 0 1.8rem; }
+  section#rating div[role="fieldset"] svg {
+    width: 1rem;
+    height: 1rem;
+    float: left;
+    margin-right: .5rem; }
+
+section#stepindicator nav {
+  display: flex;
+  flex-direction: column; }
+  section#stepindicator nav > * {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; }
+  section#stepindicator nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  section#stepindicator nav li {
+    background-color: #e9e9e9;
+    width: 100%;
+    padding: .5rem 1rem;
+    color: #595959; }
+    section#stepindicator nav li[data-completed="true"] {
+      background-color: #DE1B1B;
+      color: white; }
+      section#stepindicator nav li[data-completed="true"] a {
+        color: white; }
+  section#stepindicator nav a {
+    display: block;
+    color: #595959;
+    text-decoration: none;
+    text-align: center; }
 
 section {
   z-index: 2;
@@ -323,7 +388,7 @@ section {
     transform: scale3d(1, 1, 1); } }
 
 :root {
-  font-size: 1rem; }
+  font-size: 1vrem; }
 
 ::selection {
   background: #ee7171; }
@@ -348,6 +413,9 @@ body {
 h1, h2, h3, h4, h5, h6, p, label {
   color: #999; }
 
+p {
+  max-width: 30rem; }
+
 img {
   max-width: 100%; }
 
@@ -358,22 +426,25 @@ main {
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 5rem; }
 
 main > section {
-  padding: .5rem 1rem;
+  padding: 1rem;
   margin: 1rem;
   width: calc(100% - 2rem);
   background-color: white;
   box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.16), 0 0.3rem 0.6rem rgba(0, 0, 0, 0.23);
   display: none; }
+  main > section > h1 {
+    margin: 0 0 1.5rem 0;
+    border-bottom: 0.1rem solid #e9e9e9;
+    text-align: center;
+    padding-bottom: .5rem; }
   main > section.active {
     display: block; }
 
-main section#chat {
-  width: calc(100% - 2rem); }
-
-main section#login {
+main section {
   width: calc(100% - 2rem); }
 
 @media (min-width: 50rem) {
@@ -384,12 +455,18 @@ main section#login {
   main section#login {
     width: 30%; }
   main section#mediaitem, main section#picture {
-    width: 40%; } }
+    width: 40%; }
+  main section#rating {
+    width: 50%; } }
 
 @media (min-width: 120rem) {
-  main section#chat {
-    width: 30%; }
-  main section#login {
-    width: 20%; }
-  main section#mediaitem, main section#picture {
-    width: 40%; } }
+  main {
+    justify-content: flex-start; }
+    main section#chat {
+      width: 30%; }
+    main section#login {
+      width: 20%; }
+    main section#mediaitem, main section#picture {
+      width: 40%; }
+    main section#rating {
+      width: 30%; } }

@@ -4,7 +4,8 @@ section#picture {
 		padding: 1rem;
 		border-top-left-radius: .5rem;
 		border-top-right-radius: .5rem;
-		background-color: $lightest-gray;
+		background-color: $primary;
+		color: white;
 	}
 	figure {
 		margin: 0;
@@ -15,6 +16,7 @@ section#picture {
 		}
 
 
+
 		figcaption {
 			margin-top: -1rem;
 			padding: 1rem;
@@ -22,14 +24,23 @@ section#picture {
 			border-bottom-right-radius: .5rem;
 			background-color: $lightest-gray;
 
-
-			& *:not(a) {
+			footer {
 				color: $gray;
+				font-size: .8em;
+				line-height: .8rem;
+
+				a {
+					float: right;
+				}
+
+				time {
+				}
 			}
 
-			a {
-				float: right;
-			}
+		}
+
+		img {
+			width: 100%;
 		}
 
 		@media(orientation: portrait){
