@@ -20,6 +20,10 @@ label > input {
 	margin-right: 1rem;
 }
 
+a {
+	color: lighten($gray, 10%);
+}
+
 a.block {
 	background: $lightest-gray;
 	color: $gray;

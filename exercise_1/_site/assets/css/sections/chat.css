@@ -1,6 +1,0 @@
-section#chat ol {
-  list-style: none; }
-  section#chat ol > li[data-person="me"] p {
-    text-align: left; }
-  section#chat ol > li[data-person="other"] p {
-    text-align: right; }
