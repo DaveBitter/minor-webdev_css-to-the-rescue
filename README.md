@@ -2,4 +2,4 @@
 ## Exercise 1
 + [Code pre processor](exercise_1/)
 + [Code post processor](exercise_1/_site)
-+ [Code live](webdev.davebitter.com)
++ [Code live](http://webdev.davebitter.com)
