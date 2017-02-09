@@ -1,0 +1,35 @@
+section#rating {
+	fieldset {
+		border: none;
+		background-color: $lightest-gray;
+		position: relative;
+		padding-top: 1.4rem;
+
+		legend {
+			position: absolute;
+			color: $gray;
+			top: .5rem;
+		}
+	}
+
+	div[role="fieldset"] {
+		display: flex;
+		align-items: baseline;
+		flex-wrap: wrap;
+		flex-direction: row-reverse;
+		justify-content: center;
+
+		input {
+			margin: 1rem .2rem 0 1.8rem;
+		}
+
+
+		svg {
+			width: 1rem;
+			height: 1rem;
+			float: left;
+			margin-right: .5rem;
+		}
+
+	}
+}

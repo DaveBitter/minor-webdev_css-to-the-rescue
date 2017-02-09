@@ -1,0 +1,53 @@
+section#stepindicator {
+	nav {
+		display: flex;
+		flex-direction:column;
+
+		h1 {
+			margin-top: 0;
+		}
+
+		> * {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+		}
+
+		ol {
+			list-style: none;
+			padding: 0;
+			flex-direction: column
+
+		}
+
+		li {
+			background-color: $lightest-gray;
+			width: 100%;
+			padding: .5rem 1rem;
+			color: $gray;
+			text-align: center;
+
+			&[data-completed="true"] {
+				background-color: $primary;
+				color: white;
+
+				a {
+					color: white;
+				}
+			}
+		}
+
+		a {
+			display: block;
+			color: $gray;
+			text-decoration: none;
+			text-align: center;
+		}
+		@media(min-width: 90rem) {
+			ol {
+				flex-direction: row;
+			}
+		}
+	}
+
+}
