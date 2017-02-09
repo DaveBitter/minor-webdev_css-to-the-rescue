@@ -20,11 +20,11 @@
 }
 
 body {
-		font-family: 'Raleway', sans-serif;
-		background-color: #f2f2f2;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+	font-family: 'Raleway', sans-serif;
+	background-color: #f2f2f2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 /*	Normalize
@@ -56,7 +56,7 @@ main {
 	flex-wrap: wrap;
 	justify-content: center;
 
-	margin-top: 5rem;
+	margin-top: 6rem;
 }
 
 main > section {
@@ -73,6 +73,9 @@ main > section {
 		border-bottom: .1rem solid $lightest-gray;
 		text-align: center;
 		padding-bottom: .5rem;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1.2rem;
 	}
 
 	&.active {
@@ -95,19 +98,13 @@ main section {
 	}
 
 	main section {
-		&#chat {
-			width: 40%;
-		}
-
-		&#login {
-			width: 30%;
-		}
 		&#mediaitem,
-		&#picture {
+		&#picture,
+		&#chat,
+		&#login ,
+		&#rating,
+		&#stepindicator {
 			width: 40%;
-		}
-		&#rating {
-			width: 50%;
 		}
 	}
 
@@ -117,21 +114,18 @@ main section {
 @media(min-width: 120rem) {
 	main {
 		justify-content: flex-start;
+		margin-top: 2rem;
 
 		section {
-			&#chat {
-				width: 30%;
-			}
-
-			&#login {
+			&#chat,
+			&#login,
+			&#rating,
+			&#stepindicator {
 				width: 20%;
 			}
 			&#mediaitem,
 			&#picture {
 				width: 40%;
-			}
-			&#rating {
-				width: 30%;
 			}
 		}
 	}
