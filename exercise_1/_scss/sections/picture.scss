@@ -1,0 +1,47 @@
+section#picture {
+	h1:last-of-type:not(:only-of-type) {
+		margin: 0;
+		padding: 1rem;
+		border-top-left-radius: .5rem;
+		border-top-right-radius: .5rem;
+		background-color: $lightest-gray;
+	}
+	figure {
+		margin: 0;
+		padding: 0;
+
+		img {
+			display: none;
+		}
+
+
+		figcaption {
+			margin-top: -1rem;
+			padding: 1rem;
+			border-bottom-left-radius: .5rem;
+			border-bottom-right-radius: .5rem;
+			background-color: $lightest-gray;
+
+
+			& *:not(a) {
+				color: $gray;
+			}
+
+			a {
+				float: right;
+			}
+		}
+
+		@media(orientation: portrait){
+			img[data-orientation="portrait"] {
+				display: block;
+			}
+		}
+
+		@media(orientation: landscape){
+			img[data-orientation="landscape"] {
+				display: block;
+			}
+		}
+	}
+}

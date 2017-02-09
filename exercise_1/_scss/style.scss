@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6, p, label {
 	color: #999;
 }
 
+img {
+	max-width: 100%;
+}
+
 /*  Sections
 ---------------------------*/
 main {
@@ -90,8 +94,9 @@ main section {
 		&#login {
 			width: 30%;
 		}
-		&#mediaitem {
-			width: 50%;
+		&#mediaitem,
+		&#picture {
+			width: 40%;
 		}
 	}
 
@@ -107,7 +112,8 @@ main section {
 		&#login {
 			width: 20%;
 		}
-		&#mediaitem {
+		&#mediaitem,
+		&#picture {
 			width: 40%;
 		}
 	}

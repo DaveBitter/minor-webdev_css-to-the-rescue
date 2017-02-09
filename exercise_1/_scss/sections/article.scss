@@ -10,10 +10,11 @@ section#mediaitem {
 
 		img {
 			object-fit: cover;
-			min-height: 15rem;
 			width: auto;
-			height: auto;
+			height: 15rem;
 			border-radius: .3rem;
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
 		}
 
 		.article-header {
@@ -26,9 +27,11 @@ section#mediaitem {
 				bottom: 0;
 				left: 0;
 				background-color: $primary;
+				opacity: .8;
 				margin: 0;
 				padding: .5rem;
 				width: 100%;
+				z-index: 1;
 			}
 
 			a {
