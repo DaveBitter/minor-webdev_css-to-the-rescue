@@ -23,9 +23,14 @@ section#stepindicator {
 		li {
 			background-color: $lightest-gray;
 			width: 100%;
-			padding: .5rem 1rem;
 			color: $gray;
 			text-align: center;
+			box-sizing: border-box;
+			padding: .5rem 1rem;
+			margin-bottom: .2rem;
+
+			-webkit-clip-path: polygon(95% 0%, 100% 50%, 95% 100%, 0% 100%, 0% 50%, 0% 0%);
+			clip-path: polygon(95% 0%, 100% 50%, 95% 100%, 0% 100%, 0% 50%, 0% 0%);
 
 			&[data-completed="true"] {
 				background-color: $primary;
@@ -46,6 +51,21 @@ section#stepindicator {
 		@media(min-width: 90rem) {
 			ol {
 				flex-direction: row;
+			}
+
+			li {
+				-webkit-clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
+				clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
+				padding: .5rem 2.8rem .5rem 1rem;
+				margin-left: -2.2rem;
+
+				&:first-of-type {
+					margin-left: 0;
+					margin-right: .2rem;
+					padding-left: 0;
+					-webkit-clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 0% 50%, 0% 0%);
+					clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 0% 50%, 0% 0%);
+			}
 			}
 		}
 	}

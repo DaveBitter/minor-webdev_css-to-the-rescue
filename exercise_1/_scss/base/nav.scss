@@ -9,8 +9,6 @@ body> nav {
 	width: 100%;
 	z-index: 1000;
 
-
-
 	> header {
 		font-size: .8em;
 		width: 100%;
@@ -20,6 +18,7 @@ body> nav {
 		align-items: baseline;
 		padding: 1rem 2rem;
 		position: relative;
+		box-sizing: border-box;
 
 		> * {
 			margin: 0;
@@ -65,6 +64,7 @@ body> nav {
 		display: block;
 		padding: 1rem;
 		margin: 0;
+		box-sizing: border-box;
 	}
 
 	a.active {
@@ -103,6 +103,7 @@ body> nav {
 		> ul#menu {
 			display: block;
 			margin: 0;
+			padding-bottom: 1rem;
 
 			ul a {
 

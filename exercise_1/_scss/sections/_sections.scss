@@ -11,6 +11,7 @@ section {
 	animation-name: bounceIn;
 	animation-duration: .5s;
 	animation-fill-mode: both;
+	box-sizing: border-box;
 }
 
 @keyframes bounceIn {
