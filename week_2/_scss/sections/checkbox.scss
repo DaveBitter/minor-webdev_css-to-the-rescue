@@ -1,0 +1,36 @@
+.checkbox-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="checkbox"] {
+  margin: 0 .5rem;
+  &::after {
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: .1rem;
+    content: "";
+    transition: .2s ease-in;
+    background-color: #fff;
+    border: .2rem solid #fff;
+    box-shadow: 0 0 0 .1rem $light-gray;
+  }
+  &:hover:not(:disabled) {
+    cursor: pointer;
+    &::after {
+      background-color: $lightest-gray;
+    }
+  }
+  &:checked {
+    &::after {
+      background-color: $primary;
+      border: .2rem solid #fff;
+      box-shadow: 0 0 0 .1rem $light-gray;
+    }
+  }
+  &:disabled {
+    opacity: .5;
+    cursor: not-allowed
+  }
+}

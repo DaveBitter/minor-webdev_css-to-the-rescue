@@ -1,0 +1,56 @@
+section#rating {
+	fieldset {
+		border: none;
+		background-color: $lightest-gray;
+		position: relative;
+		padding-top: 1.4rem;
+
+		legend {
+			position: absolute;
+			color: $gray;
+			top: .5rem;
+		}
+	}
+
+	div[role="fieldset"] {
+		display: flex;
+		align-items: baseline;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		input {
+			margin: 1rem .2rem 0 1.8rem;
+
+			&[type="radio"]:checked+label svg {
+				-webkit-animation:spin 1s linear infinite;
+				-moz-animation:spin 1s linear infinite;
+				animation:spin 1s linear infinite;
+			}
+		}
+
+
+		svg {
+			width: 1rem;
+			height: 1rem;
+			float: left;
+			margin-right: .5rem;
+		}
+
+	}
+}
+
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg); transform:rotate(360deg);
+	}
+}

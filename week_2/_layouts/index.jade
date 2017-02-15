@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+		title= title
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
+		include _partials/header.jade
+
+	body
+
+		include _partials/nav.jade
+
+		main
+			include _partials/sections/randomBg.jade
+			include _partials/sections/checkbox.jade
+			include _partials/sections/spinner.jade
+			include _partials/sections/chat.jade
+			include _partials/sections/login.jade
+			include _partials/sections/mediaItem.jade
+			include _partials/sections/picture.jade
+			include _partials/sections/rating.jade
+			include _partials/sections/stepIndicator.jade
+
+
+		include _partials/footer.jade

@@ -1,0 +1,11 @@
+section#login {
+	form {
+		padding: .5rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	button[type="submit"] {
+		margin-top: 2rem;
+	}
+}
