@@ -32,7 +32,8 @@ button.btn {
 .text-right {
   text-align: right; }
 
-input, textarea {
+input,
+textarea {
   font-size: 1.1rem;
   padding: .5rem;
   border: none;
@@ -43,9 +44,19 @@ input, textarea {
   border-radius: .5rem;
   margin: .5rem 0 1rem;
   max-height: 5rem; }
-  input:hover, input:focus, textarea:hover, textarea:focus {
+  input:hover, input:focus,
+  textarea:hover,
+  textarea:focus {
     outline: none;
     background-color: #d0d0d0; }
+
+.feedback input:valid,
+.feedback textarea:valid {
+  background-color: #cdffcd; }
+
+.feedback input:invalid,
+.feedback textarea:invalid {
+  background-color: #f6b5b5; }
 
 label > input {
   margin-right: 1rem; }
@@ -312,6 +323,34 @@ section#chat form {
     flex: 0 1 100%;
     margin-bottom: 1.5rem; }
 
+.checkbox-container {
+  display: flex;
+  justify-content: space-around; }
+
+input[type="checkbox"] {
+  margin: 0 .5rem; }
+  input[type="checkbox"]::after {
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: .1rem;
+    content: "";
+    transition: .2s ease-in;
+    background-color: #fff;
+    border: .2rem solid #fff;
+    box-shadow: 0 0 0 0.1rem #a6a6a6; }
+  input[type="checkbox"]:hover:not(:disabled) {
+    cursor: pointer; }
+    input[type="checkbox"]:hover:not(:disabled)::after {
+      background-color: #e9e9e9; }
+  input[type="checkbox"]:checked::after {
+    background-color: #DE1B1B;
+    border: .2rem solid #fff;
+    box-shadow: 0 0 0 0.1rem #a6a6a6; }
+  input[type="checkbox"]:disabled {
+    opacity: .5;
+    cursor: not-allowed; }
+
 section#login form {
   padding: .5rem;
   display: flex;
@@ -393,6 +432,75 @@ section#rating div[role="fieldset"] {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+section#randombg > div {
+  height: 5rem;
+  background: #fff;
+  background-image: linear-gradient(90deg, #DE1B1B 1.1rem, transparent 0), linear-gradient(90deg, #a6a6a6 1.1rem, transparent 0), linear-gradient(90deg, #e9e9e9 1.1rem, transparent 0);
+  background-size: 4.1rem 100%, 6.1rem 100%, 8.3rem 100%; }
+
+.spinner-container {
+  display: flex;
+  justify-content: space-around; }
+
+.spinner {
+  background-color: #e9e9e9;
+  cursor: progress;
+  height: 4rem;
+  width: 4rem;
+  border: 2px solid #DE1B1B;
+  border-radius: 100%;
+  border-top-color: transparent;
+  animation-name: spinner;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  box-sizing: border-box; }
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.spinner-2 {
+  background-color: #DE1B1B;
+  cursor: progress;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  animation-name: spinner-2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  box-sizing: border-box; }
+
+@keyframes spinner-2 {
+  0% {
+    opacity: .3;
+    transform: scale(0.5); }
+  10% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(0.5); } }
+
+.spinner-3 {
+  background-color: #DE1B1B;
+  cursor: progress;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  transform-origin: bottom;
+  animation-name: spinner;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+  clip-path: polygon(100% 0, 0 0, 50% 100%); }
 
 section#stepindicator nav {
   display: flex;
@@ -527,14 +635,14 @@ main section {
 @media (min-width: 50rem) {
   main {
     flex-direction: row; }
-  main section#mediaitem, main section#picture, main section#chat, main section#login, main section#rating, main section#stepindicator {
+  main section#randombg, main section#checkbox, main section#spinner, main section#mediaitem, main section#picture, main section#chat, main section#login, main section#rating, main section#stepindicator {
     width: 40%; } }
 
 @media (min-width: 120rem) {
   main {
     justify-content: flex-start;
     margin-top: 2rem; }
-    main section#chat, main section#login, main section#rating, main section#stepindicator {
+    main section#randombg, main section#checkbox, main section#spinner, main section#chat, main section#login, main section#rating, main section#stepindicator {
       width: 20%; }
     main section#mediaitem, main section#picture {
       width: 40%; } }

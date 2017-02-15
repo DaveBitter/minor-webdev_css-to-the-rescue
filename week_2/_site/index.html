@@ -21,6 +21,9 @@
         <li>
           <h3>Components</h3>
           <ul>
+            <li><a href="#randombg">Random Background</a></li>
+            <li><a href="#checkbox">Checkboxes</a></li>
+            <li><a href="#spinner">Spinners</a></li>
             <li><a href="#chat">Chat</a></li>
             <li><a href="#login">Login</a></li>
             <li><a href="#mediaitem">Media item</a></li>
@@ -32,6 +35,26 @@
       </ul>
     </nav>
     <main>
+      <section id="randombg" class="active">
+        <h1>Random Background</h1>
+        <div></div>
+      </section>
+      <section id="checkbox" class="active">
+        <h1>checkboxes</h1>
+        <div class="checkbox-container">
+          <input type="checkbox">
+          <input type="checkbox" checked>
+          <input type="checkbox" disabled>
+        </div>
+      </section>
+      <section id="spinner" class="active">
+        <h1>Spinners</h1>
+        <div class="spinner-container">
+          <div class="spinner"></div>
+          <div class="spinner-2"></div>
+          <div class="spinner-3"></div>
+        </div>
+      </section>
       <section id="chat" class="active">
         <h1>Chat</h1>
         <ol>
@@ -70,7 +93,7 @@
       </section>
       <section id="login" class="active">
         <h1>Login</h1>
-        <form action="/" method="post">
+        <form action="/" method="post" class="feedback">
           <label for="field-email">Email</label>
           <input id="field-email" type="email" name="field-email" autocomplete="email" required="" autofocus="">
           <label for="field-password">Password</label>
