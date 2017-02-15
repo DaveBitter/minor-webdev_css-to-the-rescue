@@ -1,0 +1,15 @@
+section#stepindicator.active
+	h1 Step indicator
+	nav
+		h1 Finish your order
+		progress(value='0.25', max='1') 25%
+		ol
+			li(data-completed="true")
+				a(href='/cart') Cart
+			li(data-completed="false")
+				a(href='#main-content', aria-label='Address, current step') Address
+			li(data-completed="false")
+				| Payment
+			li(data-completed="false")
+				| Confirm
+

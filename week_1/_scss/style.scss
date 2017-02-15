@@ -1,0 +1,125 @@
+/*	Imports
+------------------------*/
+// @import url("https://fonts.googleapis.com/css?family=Raleway");
+@import './_variables/_variables.scss';
+@import './base/_base.scss';
+@import './sections/_sections.scss';
+
+
+
+:root {
+	 font-size: 1vrem;
+}
+
+::selection {
+  background: lighten($primary, 20%);
+}
+
+::-moz-selection {
+  background: lighten($primary, 20%);
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: #f2f2f2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6, p, label {
+	color: #999;
+}
+
+p {
+	max-width: 30rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*  Sections
+---------------------------*/
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	margin-top: 6rem;
+}
+
+main > section {
+	padding: 1rem;
+	margin: 1rem;
+	width: calc(100% - 2rem);
+	background-color: white;
+	box-shadow: 0 .3rem .6rem rgba(0,0,0,0.16), 0 .3rem .6rem rgba(0,0,0,0.23);
+
+	display: none;
+
+	> h1 {
+		margin: 0 0 1.5rem 0;
+		border-bottom: .1rem solid $lightest-gray;
+		text-align: center;
+		padding-bottom: .5rem;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1.2rem;
+	}
+
+	&.active {
+		display: block;
+	}
+
+}
+
+
+main section {
+	& {
+		width: calc(100% - 2rem);
+	}
+}
+
+
+@media(min-width: 50rem) {
+	main {
+		flex-direction: row;
+	}
+
+	main section {
+		&#mediaitem,
+		&#picture,
+		&#chat,
+		&#login ,
+		&#rating,
+		&#stepindicator {
+			width: 40%;
+		}
+	}
+
+}
+
+
+@media(min-width: 120rem) {
+	main {
+		justify-content: flex-start;
+		margin-top: 2rem;
+
+		section {
+			&#chat,
+			&#login,
+			&#rating,
+			&#stepindicator {
+				width: 20%;
+			}
+			&#mediaitem,
+			&#picture {
+				width: 40%;
+			}
+		}
+	}
+
+}
