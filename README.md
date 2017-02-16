@@ -15,11 +15,11 @@ I highly encourage adding issues to this repo in the case of finding one. I'm al
 ### Week 1
 + [Code pre processor](week_1/)
 + [Code post processor](week_1/_site)
-+ [Code live](http://webdev.davebitter.com)
++ [Code live](http://webdev.davebitter.com/exercises/cttr/week_1/)
 
 ### Week 2
 + [Code pre processor](week_2/)
 + [Code post processor](week_2/_site)
-+ [Code live](http://webdev.davebitter.com)
++ [Code live](http://webdev.davebitter.com/exercises/cttr/week_2/)
 
 
