@@ -4,11 +4,10 @@
 }
 
 input[type="checkbox"] {
-  margin: 0 .5rem;
   &::after {
     display: block;
-    height: 1rem;
-    width: 1rem;
+    height: .6rem;
+    width: .6rem;
     border-radius: .1rem;
     content: "";
     transition: .2s ease-in;
@@ -22,7 +21,8 @@ input[type="checkbox"] {
       background-color: $lightest-gray;
     }
   }
-  &:checked {
+  &:checked,
+  &:checked:hover:not(:disabled) {
     &::after {
       background-color: $primary;
       border: .2rem solid #fff;
