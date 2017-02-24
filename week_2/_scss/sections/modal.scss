@@ -1,0 +1,55 @@
+section#modal {
+	z-index: 10000;
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	bottom: 2rem;
+	left: 2rem;
+	width: calc(100vw - 4rem);
+	height: calc(100vh - 4rem);
+
+	margin: 0;
+	padding: 0;
+
+	overflow-y: scroll;
+
+	// modal showed a scrollbar but nothing to scroll
+	overflow-x: hidden;
+
+	h1 {
+		color: $primary;
+	}
+
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: calc(100vh - 6rem);
+	}
+
+	button.close-modal {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 2rem;
+		height: 2rem;
+
+		opacity: .6;
+		cursor: pointer;
+
+		margin: 1rem;
+		font-size: 1.3rem;
+		font-weight: bold;
+
+		background-color: #fff;
+		color: $light-gray;
+		border: none;
+
+		transition: .3s ease-in-out;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+	}
+}
+

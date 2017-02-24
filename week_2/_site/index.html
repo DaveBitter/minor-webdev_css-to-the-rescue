@@ -116,16 +116,19 @@
       </section>
       <section id="picture" class="active">
         <h1>Picture</h1>
-        <article></article>
-        <h1>This picture has a title</h1>
-        <figure><img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" data-orientation="portrait"><img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" data-orientation="landscape">
-          <figcaption>
-            <p>There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.</p>
-            <footer>
-              <time datetime="2017-02-06">6-2-2017</time> © 2017<a href="https://vasilis.nl">Vasilis van Gemert</a>
-            </footer>
-          </figcaption>
-        </figure>
+        <article>
+          <h1>This picture has a title</h1>
+          <div id="picture-fig">
+            <figure><img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" data-orientation="portrait"><img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" data-orientation="landscape">
+              <figcaption>
+                <p>There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.</p>
+                <footer>
+                  <time datetime="2017-02-06">6-2-2017</time> © 2017<a href="https://vasilis.nl">Vasilis van Gemert</a>
+                </footer>
+              </figcaption>
+            </figure>
+          </div>
+        </article>
       </section>
       <section id="rating" class="active">
         <h1>Rating</h1>
@@ -200,6 +203,20 @@
             <li data-completed="false">Confirm</li>
           </ol>
         </nav>
+      </section>
+      <section id="modal">
+        <button class="close-modal">x</button>
+        <div id="picture-fig">
+          <figure><img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" data-orientation="portrait"><img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" data-orientation="landscape">
+            <figcaption>
+              <h1>This picture has a title</h1>
+              <p>There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.</p>
+              <footer>
+                <time datetime="2017-02-06">6-2-2017</time> © 2017<a href="https://vasilis.nl">Vasilis van Gemert</a>
+              </footer>
+            </figcaption>
+          </figure>
+        </div>
       </section>
     </main>
     <script type="text/javascript" src="assets/js/Script.js"></script>

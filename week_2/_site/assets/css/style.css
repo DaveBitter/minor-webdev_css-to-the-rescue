@@ -360,7 +360,47 @@ section#login form {
 section#login button[type="submit"] {
   margin-top: 2rem; }
 
-section#picture h1:last-of-type:not(:only-of-type) {
+section#modal {
+  z-index: 10000;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  width: calc(100vw - 4rem);
+  height: calc(100vh - 4rem);
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+  section#modal h1 {
+    color: #DE1B1B; }
+  section#modal img {
+    object-fit: cover;
+    width: 100%;
+    height: calc(100vh - 6rem); }
+  section#modal button.close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    opacity: .6;
+    cursor: pointer;
+    margin: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #fff;
+    color: #a6a6a6;
+    border: none;
+    transition: .3s ease-in-out; }
+    section#modal button.close-modal:hover, section#modal button.close-modal:focus {
+      opacity: 1; }
+
+section#picture img {
+  cursor: pointer; }
+
+#picture-fig h1:last-of-type:not(:only-of-type) {
   margin: 0;
   padding: 1rem;
   border-top-left-radius: .5rem;
@@ -368,30 +408,30 @@ section#picture h1:last-of-type:not(:only-of-type) {
   background-color: #DE1B1B;
   color: white; }
 
-section#picture figure {
+#picture-fig figure {
   margin: 0;
   padding: 0; }
-  section#picture figure img {
+  #picture-fig figure img {
     display: none; }
-  section#picture figure figcaption {
+  #picture-fig figure figcaption {
     margin-top: -1rem;
     padding: 1rem;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
     background-color: #e9e9e9; }
-    section#picture figure figcaption footer {
+    #picture-fig figure figcaption footer {
       color: #595959;
       font-size: .8em;
       line-height: .8rem; }
-      section#picture figure figcaption footer a {
+      #picture-fig figure figcaption footer a {
         float: right; }
-  section#picture figure img {
+  #picture-fig figure img {
     width: 100%; }
   @media (orientation: portrait) {
-    section#picture figure img[data-orientation="portrait"] {
+    #picture-fig figure img[data-orientation="portrait"] {
       display: block; } }
   @media (orientation: landscape) {
-    section#picture figure img[data-orientation="landscape"] {
+    #picture-fig figure img[data-orientation="landscape"] {
       display: block; } }
 
 section#rating fieldset {

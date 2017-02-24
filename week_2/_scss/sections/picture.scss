@@ -1,4 +1,10 @@
 section#picture {
+	img {
+		cursor: pointer;
+	}
+}
+
+#picture-fig {
 	h1:last-of-type:not(:only-of-type) {
 		margin: 0;
 		padding: 1rem;
