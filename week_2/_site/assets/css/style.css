@@ -360,7 +360,8 @@ section#login form {
 section#login button[type="submit"] {
   margin-top: 2rem; }
 
-section#modal {
+#modal {
+  display: none;
   z-index: 10000;
   position: fixed;
   top: 2rem;
@@ -373,13 +374,13 @@ section#modal {
   padding: 0;
   overflow-y: scroll;
   overflow-x: hidden; }
-  section#modal h1 {
+  #modal h1 {
     color: #DE1B1B; }
-  section#modal img {
+  #modal img {
     object-fit: cover;
     width: 100%;
     height: calc(100vh - 6rem); }
-  section#modal button.close-modal {
+  #modal button.close-modal {
     position: absolute;
     top: 0;
     right: 0;
@@ -394,8 +395,10 @@ section#modal {
     color: #a6a6a6;
     border: none;
     transition: .3s ease-in-out; }
-    section#modal button.close-modal:hover, section#modal button.close-modal:focus {
+    #modal button.close-modal:hover, #modal button.close-modal:focus {
       opacity: 1; }
+  #modal.active {
+    display: block; }
 
 section#picture img {
   cursor: pointer; }
@@ -447,12 +450,12 @@ section#rating fieldset {
 section#rating div[role="fieldset"] {
   display: flex;
   align-items: baseline;
-  flex-wrap: wrap;
   justify-content: center; }
 
 section#rating label {
   cursor: pointer;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  font-size: 0; }
 
 section#rating svg {
   width: 1.5rem;
@@ -464,7 +467,7 @@ section#rating svg {
   filter: grayscale(70%); }
 
 section#rating input {
-  margin: 1rem .2rem 0 1.8rem;
+  margin: 1rem 0.5rem;
   opacity: 0; }
   section#rating input[type="radio"]:checked + label svg {
     animation: spin 1s infinite;
