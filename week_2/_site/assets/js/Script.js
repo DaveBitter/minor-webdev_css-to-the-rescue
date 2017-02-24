@@ -15,6 +15,14 @@
             document.getElementById("menu-button").addEventListener("click", function () {
                 document.getElementById("menu").classList.toggle("is-open");
             });
+
+            document.getElementById("picture-fig").addEventListener("click", function () {
+                document.getElementById("modal").classList.toggle("active");
+            });
+
+            document.querySelector(".close-modal").addEventListener("click", function () {
+                document.getElementById("modal").classList.toggle("active");
+            });
         }
     };
     var sections = {

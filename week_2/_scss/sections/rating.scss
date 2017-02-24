@@ -13,12 +13,12 @@ section#rating {
   div[role="fieldset"] {
     display: flex;
     align-items: baseline;
-    flex-wrap: wrap;
     justify-content: center;
   }
   label {
     cursor: pointer;
     line-height: 1.5rem;
+    font-size: 0;
   }
   svg {
     width: 1.5rem;
@@ -30,7 +30,7 @@ section#rating {
     filter: grayscale(70%);
   }
   input {
-    margin: 1rem .2rem 0 1.8rem;
+    margin: 1rem 0.5rem;
     opacity: 0;
     &[type="radio"]:checked+label svg {
       animation: spin 1s infinite;
