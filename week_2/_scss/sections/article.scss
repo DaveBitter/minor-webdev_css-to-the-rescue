@@ -33,11 +33,42 @@ section#mediaitem {
 				width: 100%;
 				z-index: 1;
 				box-sizing: border-box;
+
+				&:after {
+					position: absolute;
+					top: -11rem;
+					right: 0;
+					bottom: 3.5rem;
+					left: 0;
+
+					padding: 0 20px;
+					content: " ";
+					cursor: pointer;
+				}
 			}
 
 			a {
 				color: white;
 				text-decoration: none;
+			}
+		}
+
+		&:first-of-type {
+			border-bottom: .1rem solid $light-gray;
+			margin-bottom: 1rem;
+		}
+
+		&:not(:first-of-type) {
+			margin: .2rem;
+			width: calc(50% - .4rem);
+			float: left;
+
+			h1 {
+				font-size: .8rem;
+			}
+
+			p {
+				display: none;
 			}
 		}
 	}
