@@ -10,6 +10,10 @@ progress[value] {
 	background-color: $lightest-gray;
 }
 
+progress::-moz-progress-bar {
+  background-color: $primary;
+}
+
 progress[value]::-webkit-progress-bar {
 	background-color: white;
 	border-radius: .3rem;

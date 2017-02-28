@@ -201,6 +201,9 @@ progress[value] {
   position: relative;
   background-color: #e9e9e9; }
 
+progress::-moz-progress-bar {
+  background-color: #DE1B1B; }
+
 progress[value]::-webkit-progress-bar {
   background-color: white;
   border-radius: .3rem;
