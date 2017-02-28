@@ -1,0 +1,35 @@
+section#chat.active
+	h1 Chat
+	ol
+		li(data-person="me")
+			p
+				| Hey!
+			footer
+				p
+					| Posted on
+					time(datatime='2015-01-22T10:25') 10:25 AM
+					|  by you
+				p(data-status='READ') Has been read
+		li(data-person="other")
+			p
+				| Hey! Sorry I was busy
+			footer
+				p
+					| Posted on
+					time(datatime='2017-02-03T14:19') 2:19 PM
+					|  by John
+		li(data-person="me")
+			p
+				| I sent that 2 years ago
+			footer
+				p
+					| Posted on
+					time(datatime='2017-02-03T14:22') 2:22 PM
+					|  by you
+				p(data-status='DELIVERED') Has been delivered
+	form(action='/', method='post')
+		label(for='field-message') Message
+		textarea#field-message(name='field-message')
+		button(type='submit') Send
+
+

@@ -1,0 +1,63 @@
+section#rating {
+  fieldset {
+    border: none;
+    background-color: $lightest-gray;
+    position: relative;
+    padding-top: 1.4rem;
+    legend {
+      position: absolute;
+      color: $gray;
+      top: .5rem;
+    }
+  }
+  div[role="fieldset"] {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+  label {
+    cursor: pointer;
+    line-height: 1.5rem;
+    font-size: 0;
+  }
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    float: left;
+    margin-right: .5rem;
+    margin-left: -1rem;
+    -webkit-filter: grayscale(70%);
+    filter: grayscale(70%);
+  }
+  input {
+    margin: 1rem 0.5rem;
+    opacity: 0;
+    &[type="radio"]:checked+label svg {
+      animation: spin 1s infinite;
+      -webkit-filter: none;
+      filter: none;
+    }
+    &[type="radio"]:indeterminate+label svg {
+      animation: growy 2s infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes growy {
+  0% {
+    transform: scale(.8);
+  }
+  10% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.8);
+  }
+}

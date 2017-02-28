@@ -1,0 +1,64 @@
+section#picture {
+	img {
+		cursor: pointer;
+	}
+}
+
+#picture-fig {
+	h1:last-of-type:not(:only-of-type) {
+		margin: 0;
+		padding: 1rem;
+		border-top-left-radius: .5rem;
+		border-top-right-radius: .5rem;
+		background-color: $primary;
+		color: white;
+	}
+	figure {
+		margin: 0;
+		padding: 0;
+
+		img {
+			display: none;
+		}
+
+
+
+		figcaption {
+			margin-top: -1rem;
+			padding: 1rem;
+			border-bottom-left-radius: .5rem;
+			border-bottom-right-radius: .5rem;
+			background-color: $lightest-gray;
+
+			footer {
+				color: $gray;
+				font-size: .8em;
+				line-height: .8rem;
+
+				a {
+					float: right;
+				}
+
+				time {
+				}
+			}
+
+		}
+
+		img {
+			width: 100%;
+		}
+
+		@media(orientation: portrait){
+			img[data-orientation="portrait"] {
+				display: block;
+			}
+		}
+
+		@media(orientation: landscape){
+			img[data-orientation="landscape"] {
+				display: block;
+			}
+		}
+	}
+}

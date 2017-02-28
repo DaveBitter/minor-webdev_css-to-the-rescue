@@ -1,0 +1,8 @@
+section#randombg {
+  >div {
+    height: 5rem;
+    background: #fff;
+    background-image: linear-gradient(90deg, $primary 1.1rem, transparent 0), linear-gradient(90deg, $light-gray 1.1rem, transparent 0), linear-gradient(90deg, $lightest-gray 1.1rem, transparent 0);
+    background-size: 4.1rem 100%, 6.1rem 100%, 8.3rem 100%;
+  }
+}
