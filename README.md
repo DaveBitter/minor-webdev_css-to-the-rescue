@@ -1,7 +1,7 @@
 # Minor WebDev | CSS To The Rescue
 Dave Bitter | 500710907
 
-    V 1.0.4
+    V 1.0.5
 
 ## General
 This repository holds the seperate exercises for the course 'Css To The Rescue', part of the minor "Webdevelopment" at the [HvA](http://www.hva.nl/)
@@ -20,6 +20,11 @@ I highly encourage adding issues to this repo in the case of finding one. I'm al
 ### Week 2
 + [Code pre processor](week_2/)
 + [Code post processor](week_2/_site)
++ [Code live](http://webdev.davebitter.com)
+
+### Week 3
++ [Code pre processor](week_3/)
++ [Code post processor](week_3/_site)
 + [Code live](http://webdev.davebitter.com)
 
 
