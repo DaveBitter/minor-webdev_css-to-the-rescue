@@ -53,6 +53,11 @@ section#stepindicator {
 				flex-direction: row;
 			}
 
+			> progress {
+				width: calc(100% - 1.8rem);
+			}
+
+
 			li {
 				-webkit-clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
 				clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);

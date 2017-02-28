@@ -619,6 +619,8 @@ section#stepindicator nav {
   @media (min-width: 90rem) {
     section#stepindicator nav ol {
       flex-direction: row; }
+    section#stepindicator nav > progress {
+      width: calc(100% - 1.8rem); }
     section#stepindicator nav li {
       -webkit-clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
       clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
